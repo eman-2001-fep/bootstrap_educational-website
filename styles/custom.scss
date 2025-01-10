@@ -198,6 +198,82 @@ $font-sizes: (
   }
 }
 }
+.course-card {
+  position: relative;
+  background-color: #2D2752;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.price-circle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  background-color: #473f81;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body {
+  padding: 1rem 1.25rem;
+  color: white;
+}
+
+.course-category {
+  color: #B7CBFA;
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.course-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  margin: 10px;
+
+}
+
+.course-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 10px 15px 10px;
+
+  font-size: 0.75rem;
+  color: #B7CBFA;
+  font-weight: bold;
+}
+
+.card-img-top {
+  height: 150px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure the image fills the container and maintains aspect ratio */
+  width: 100%; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-muted {
+text-wrap: nowrap
+
+}
+
 
 // Import Bootstrap SCSS
 @import "../node_modules/bootstrap/scss/bootstrap";
