@@ -7,6 +7,7 @@ $spacers: (
   5: 3rem,
   6: 5rem, // Add new larger padding value
   7:8rem,
+  8:10rem,
 );
 
 $primary: #1B143F; 
@@ -109,15 +110,93 @@ $font-sizes: (
   margin-top: 230px;
 
   // Adjust position for smaller screens
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     position: absolute;
-    bottom: -200px; // Push the image downward
+    bottom: -100px; // Push the image downward
   }
 
   @media (max-width: 576px) {
     position: absolute;
     bottom: -90px; // Push further downward on very small screens
   }
+}
+.no-wrap-container {
+  white-space: nowrap; /* Prevent wrapping */
+  overflow-x: auto;    /* Allow horizontal scrolling on very small screens */
+}
+
+.custom-img {
+
+  max-width: 12rem; /* Default size */
+  flex-shrink: 0;   /* Prevent excessive shrinking */
+
+@media (min-width: 576px) {
+  .custom-img {
+    max-width: 15rem; /* Increase size for small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-img {
+    max-width: 18rem; /* Increase size for medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .custom-img {
+    max-width: 10rem; /* Adjust size for large screens */
+  }
+}
+}
+
+/* Partner Logos Section */
+.partner-logo {
+  max-width: 50px; /* Default size for medium to large screens */
+  transition: transform 0.3s ease, max-width 0.3s ease;
+
+@media (max-width: 768px) {
+  .partner-logo {
+    max-width: 40px; /* Smaller size for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .partner-logo {
+    max-width: 30px; /* Smallest size for phones */
+  }
+}
+}
+.margin-negative{
+  @media (max-width: 768px) {
+    .margin-negative {
+     margin-top: -1000px;   
+ }
+  }
+  
+  @media (max-width: 576px) {
+    .margin-negative{
+      margin-top: -100px;    
+    }
+  }
+
+}
+.partners-section {
+  margin-top: 350px;
+  transition: margin 0.3s ease;
+
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  .partner-logo {
+    max-width: 40px; /* Reduce size */
+    margin-top: -300px; /* Move section upward */
+
+  }
+
+  .partners-section {
+    margin-top: -200px; /* Move section upward */
+  }
+}
 }
 
 // Import Bootstrap SCSS
